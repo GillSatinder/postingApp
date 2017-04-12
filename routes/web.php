@@ -5,6 +5,41 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+
+Route::resource('admin/users','AdminUsersController');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Route::resource('movies','MovieController');
 //
 //
@@ -19,9 +54,3 @@ Route::get('/', function () {
 //{
 //    return view ('news');
 //});
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-
-
-Route::resource('admin/users','AdminUsersController');
